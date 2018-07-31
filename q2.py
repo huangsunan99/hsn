@@ -1,0 +1,51 @@
+# import math
+# class Vector(object):
+#     def __init__(self,coordinates):
+#         self.coordinates=tuple(coordinates)
+#     def calculateSize(self):
+#         result =0
+#         num = len(self.coordinates)
+#         for i  in range(num):
+#             result +=self.coordinates[i] * self.coordinates[i]
+#         result = math.sqrt(result)
+#         return round(result,5)
+# ate=Vector([1,2,3])
+# print ate.calculateSize()
+
+import math
+
+
+class Vector(object):
+    def __init__(self, x0, y0, z0):
+        self.x = x0
+        self.y = y0
+        self.z = z0
+
+    def length(self):
+        return math.sqrt(self.x ** 2 + self.y ** 2 + self.z ** 2)
+
+    def scale(self, fac):
+        self.x *=  fac
+        self.y = self.y * fac
+        self.z = self.z * fac
+
+    def dot_product(self,v):
+        assert isinstance(v, Vector)
+        return self.x* v.x+self.y*v.y+self.z*v.z
+
+    def cross_product(self,v):
+        m=self.y*v.z-self.z*v.y
+        n=self.z*v.x-self.x*v.z
+        p=self.x*v.y-self.y*v.x
+        return Vector(m,n,p)
+
+ate = Vector(1, 2, 3)
+print ate.length()
+print ate.scale(8)
+print ate.length()
+# print ate.dot_productor()
+
+Vx = Vector(1.0, 0.0, 0.0)
+Vy = Vector(0.0, 1.0, 0.0)
+Vz = Vx.cross_product(Vy)
+pass
