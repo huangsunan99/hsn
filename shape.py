@@ -20,7 +20,7 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return math.pi*self.radius**2
+        return math.pi * self.radius ** 2
 
 if __name__ == '__main__':
     my_shapes = [Rect(1.0, 2.0), Rect(2.0, 4.0), Circle(5.0)]

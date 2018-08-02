@@ -35,9 +35,9 @@ class Vector(object):
         return self.x* v.x+self.y*v.y+self.z*v.z
 
     def cross_product(self, v):
-        m = self.y*v.z-self.z*v.y
-        n = self.z*v.x-self.x*v.z
-        p = self.x*v.y-self.y*v.x
+        m = self.y * v.z-self.z * v.y
+        n = self.z * v.x-self.x * v.z
+        p = self.x * v.y-self.y * v.x
         return Vector(m, n, p)
 
 if __name__ == '__main__':
