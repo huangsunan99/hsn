@@ -11,7 +11,8 @@ class Vector(object):
         for i in range(num):
             result += self.coordinates[i] * self.coordinates[i]
         result = math.sqrt(result)
-        return result"""
+        return result
+"""
 
 
 class Vector1(object):
