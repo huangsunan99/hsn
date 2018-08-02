@@ -15,7 +15,7 @@ class Vector(object):
 """
 
 
-class Vector1(object):
+class Vector(object):
     def __init__(self, x0, y0, z0):
         self.x = x0
         self.y = y0
@@ -37,16 +37,16 @@ class Vector1(object):
         m = self.y*v.z-self.z*v.y
         n = self.z*v.x-self.x*v.z
         p = self.x*v.y-self.y*v.x
-        return Vector1(m, n, p)
+        return Vector(m, n, p)
 
 if __name__ == '__main__':
     """ate = Vector([1, 2, 3])
     print ate.calculate_size()"""
-    test_vector = Vector1(1, 2, 3)
+    test_vector = Vector(1, 2, 3)
     print test_vector.length()
     print test_vector.scale(8)
     print test_vector.length()
-    Vx = Vector1(1.0, 0.0, 0.0)
-    Vy = Vector1(0.0, 1.0, 0.0)
+    Vx = Vector(1.0, 0.0, 0.0)
+    Vy = Vector(0.0, 1.0, 0.0)
     Vz = Vx.cross_product(Vy)
     pass
