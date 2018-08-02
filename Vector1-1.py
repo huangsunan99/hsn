@@ -1,6 +1,6 @@
 import math
 
-
+"""
 class Vector(object):
     def __init__(self, coordinates):
         self.coordinates = tuple(coordinates)
@@ -11,7 +11,7 @@ class Vector(object):
         for i in range(num):
             result += self.coordinates[i] * self.coordinates[i]
         result = math.sqrt(result)
-        return result
+        return result"""
 
 
 class Vector1(object):
@@ -39,8 +39,8 @@ class Vector1(object):
         return Vector1(m, n, p)
 
 if __name__ == '__main__':
-    ate = Vector([1, 2, 3])
-    print ate.calculate_size()
+    """ate = Vector([1, 2, 3])
+    print ate.calculate_size()"""
     test_vector = Vector1(1, 2, 3)
     print test_vector.length()
     print test_vector.scale(8)
