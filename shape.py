@@ -7,9 +7,9 @@ class Shape(object):
 
 
 class Rect(Shape):
-    def __init__(self,width,height):
+    def __init__(self, width, height):
         self.width = width
-        self.height= height
+        self.height = height
 
     def area(self):
         return self.height * self.width
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     sum_shapes = 0.0
     for shape in my_shapes:
         sum_shapes += shape.area()
-print my_shapes[0].area()
-print my_shapes[1].area()
-print my_shapes[2].area()
-print sum_shapes
+    print my_shapes[0].area()
+    print my_shapes[1].area()
+    print my_shapes[2].area()
+    print sum_shapes

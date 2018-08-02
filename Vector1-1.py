@@ -1,19 +1,20 @@
 import math
+
+
 class Vector(object):
     def __init__(self, coordinates):
         self.coordinates = tuple(coordinates)
-    def calculatesize(self):
+
+    def calculate_size(self):
         result =0
         num = len(self.coordinates)
         for i in range(num):
             result += self.coordinates[i] * self.coordinates[i]
         result = math.sqrt(result)
         return result
-ate = Vector([1, 2, 3])
-print ate.calculatesize()
 
-import math
-class Vector(object):
+
+class Vector1(object):
     def __init__(self, x0, y0, z0):
         self.x = x0
         self.y = y0
@@ -31,18 +32,20 @@ class Vector(object):
         assert isinstance(v, Vector)
         return self.x* v.x+self.y*v.y+self.z*v.z
 
-    def cross_product(self,v):
-        m=self.y*v.z-self.z*v.y
-        n=self.z*v.x-self.x*v.z
-        p=self.x*v.y-self.y*v.x
-        return Vector(m,n,p)
+    def cross_product(self, v):
+        m = self.y*v.z-self.z*v.y
+        n = self.z*v.x-self.x*v.z
+        p = self.x*v.y-self.y*v.x
+        return Vector1(m, n, p)
 
 if __name__ == '__main__':
-    test_vector = Vector(1, 2, 3)
+    ate = Vector([1, 2, 3])
+    print ate.calculate_size()
+    test_vector = Vector1(1, 2, 3)
     print test_vector.length()
     print test_vector.scale(8)
     print test_vector.length()
-    Vx = Vector(1.0, 0.0, 0.0)
-    Vy = Vector(0.0, 1.0, 0.0)
+    Vx = Vector1(1.0, 0.0, 0.0)
+    Vy = Vector1(0.0, 1.0, 0.0)
     Vz = Vx.cross_product(Vy)
     pass
